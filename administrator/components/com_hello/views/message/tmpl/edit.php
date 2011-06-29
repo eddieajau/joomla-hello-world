@@ -19,13 +19,13 @@ JHtml::_('behavior.keepalive');
 	// Attach a behaviour to the submit button to check validation.
 	Joomla.submitbutton = function(task)
 	{
-		var form = document.id('hello-form');
+		var form = document.id('message-form');
 		if (task == 'hello.cancel' || document.formvalidator.isValid(form)) {
 			<?php echo $this->form->getField('body')->save(); ?>
 			Joomla.submitform(task, form);
 		}
 		else {
-			<?php JText::script('COM_hello_ERROR_N_INVALID_FIELDS'); ?>
+			<?php JText::script('COM_HELLO_ERROR_N_INVALID_FIELDS'); ?>
 			// Count the fields that are invalid.
 			var elements = form.getElements('fieldset').concat(Array.from(form.elements));
 			var invalid = 0;
@@ -37,13 +37,13 @@ JHtml::_('behavior.keepalive');
 				}
 			}
 
-			alert(Joomla.JText._('COM_hello_ERROR_N_INVALID_FIELDS').replace('%d', invalid));
+			alert(Joomla.JText._('COM_HELLO_ERROR_N_INVALID_FIELDS').replace('%d', invalid));
 		}
 	}
 </script>
 
-<form action="<?php echo JRoute::_('index.php?option=com_hello&layout=edit&id='.(int) $this->item->com_hello); ?>"
-	method="post" name="adminForm" id="hello-form" class="form-validate">
+<form action="<?php echo JRoute::_('index.php?option=com_hello&layout=edit&id='.(int) $this->item->id); ?>"
+	method="post" name="adminForm" id="message-form" class="form-validate">
 	<div class="width-60 fltlft">
 		<fieldset class="adminform">
 			<ul class="adminformlist">
@@ -83,11 +83,6 @@ JHtml::_('behavior.keepalive');
 				</li>
 
 				<li>
-					<?php echo $this->form->getLabel('com_hello'); ?>
-					<?php echo $this->form->getInput('com_hello'); ?>
-				</li>
-
-				<li>
 					<?php echo $this->form->getLabel('note'); ?>
 					<?php echo $this->form->getInput('note'); ?>
 				</li>
@@ -100,7 +95,7 @@ JHtml::_('behavior.keepalive');
 		</fieldset>
 	</div>
 	<div class="width-40 fltrt">
-		<?php echo JHtml::_('sliders.start','hello-sliders-'.$this->item->com_hello, array('useCookie' => 1)); ?>
+		<?php echo JHtml::_('sliders.start','hello-sliders-'.$this->item->id, array('useCookie' => 1)); ?>
 
 		<?php echo $this->loadTemplate('params'); ?>
 
