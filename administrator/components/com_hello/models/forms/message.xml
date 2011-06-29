@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- $Id$ -->
+<form>
+	<fieldset>
+		<field name="id"
+			type="text"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description ="JGLOBAL_FIELD_ID_DESC"
+			default="0"
+			class="readonly"
+			size="10"
+			readonly="true"  />
+
+		<field name="category_id"
+			type="category"
+			extension="COM_HELLO"
+			label="JCATEGORY"
+			description="JFIELD_CATEGORY_DESC"
+			default="0"
+			class="inputbox"
+			required="true">
+			<option value="0">JOPTION_NO_CATEGORY</option>
+		</field>
+
+		<field name="title"
+			type="text"
+			label="JGLOBAL_TITLE"
+			description="JFIELD_TITLE_DESC"
+			class="inputbox"
+			size="30"
+			required="true" />
+
+		<field name="alias"
+			type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC"
+			class="inputbox"
+			size="45" />
+
+		<field name="body"
+			type="editor"
+			label="COM_HELLO_FIELD_BODY_LABEL"
+			description="COM_HELLO_FIELD_BODY_DESC"
+			class="inputbox"
+			filter="safehtml"
+			buttons="true" />
+
+		<field name="note"
+			type="text"
+			label="JFIELD_NOTE_LABEL"
+			description="JFIELD_NOTE_DESC"
+			class="inputbox"
+			size="45" />
+
+		<field name="published"
+			type="list"
+			label="JPUBLISHED"
+			description="JFIELD_PUBLISHED_DESC"
+			default="1"
+			class="inputbox"
+			filter="intval"
+			size="1">
+			<option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>
+			<option value="2">
+				JARCHIVED</option>
+			<option value="-2">
+				JTRASHED</option>
+		</field>
+
+		<field name="ordering"
+			type="text"
+			label="JFIELD_ORDERING_LABEL"
+			description="JFIELD_ORDERING_DESC"
+			default="0"
+			class="inputbox"
+			size="6" />
+
+		<field name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC"
+			class="inputbox"
+			size="1" />
+
+		<field name="language"
+			type="contentlanguage"
+			label="JFIELD_LANGUAGE_LABEL"
+			description="JFIELD_FIELD_LANGUAGE_DESC"
+			default="*"
+			class="inputbox">
+			<option value="*">JALL</option>
+		</field>
+
+		<field name="metadesc"
+			type="textarea"
+			label="JFIELD_META_DESCRIPTION_LABEL"
+			description="JFIELD_META_DESCRIPTION_DESC"
+			class="inputbox"
+			rows="3"
+			cols="30" />
+
+		<field name="metakey"
+			type="textarea"
+			label="JFIELD_META_KEYWORDS_LABEL"
+			description="JFIELD_META_KEYWORDS_DESC"
+			class="inputbox"
+			rows="3"
+			cols="30" />
+
+		<field name="checked_out"
+			type="hidden"
+			filter="unset" />
+
+		<field name="checked_out_time"
+			type="hidden"
+			filter="unset" />
+
+		<field name="created_user_id"
+			type="hidden"
+			filter="unset" />
+
+		<field name="created_time"
+			type="text"
+			label="COM_HELLO_FIELD_CREATED_TIME_LABEL"
+			description="COM_HELLO_FIELD_CREATED_TIME_DESC"
+			class="readonly"
+			size="20"
+			readonly="true"
+			filter="unset" />
+
+		<field name="modified_user_id"
+			type="hidden"
+			filter="unset" />
+
+		<field name="modified_time"
+			type="text"
+			label="COM_HELLO_FIELD_MODIFIED_TIME_LABEL"
+			description="COM_HELLO_FIELD_MODIFIED_TIME_DESC"
+			class="readonly"
+			size="20"
+			readonly="true"
+			filter="unset" />
+	</fieldset>
+
+	<fields name="params">
+		<fieldset name="basic" label="COM_HELLO_BASIC_PARAMS_FIELDSET_LABEL">
+			<field name="show_title"
+				type="list"
+				label="JGLOBAL_SHOW_TITLE_LABEL"
+				description="COM_HELLO_PARAM_SHOW_TITLE_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="advanced" label="COM_HELLO_ADVANCED_PARAMS_FIELDSET_LABEL">
+			<field name="layout"
+				type="componentlayout"
+				label="JFIELD_ALT_LAYOUT_LABEL"
+				description="JFIELD_ALT_COMPONENT_LAYOUT_DESC"
+				extension="COM_HELLO"
+				view="message" />
+		</fieldset>
+	</fields>
+
+</form>

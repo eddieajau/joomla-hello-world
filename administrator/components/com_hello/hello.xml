@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id$ -->
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>COM_HELLO</name>
+	<author>Andrew Eddie</author>
+	<creationDate>June 2010</creationDate>
+	<copyright>Copyright 2010 New Life in IT Pty Ltd. All rights reserved.	</copyright>
+	<license>GNU General Public License version 2 or later.</license>
+	<authorEmail>andrew.eddie@newlifeinit.com</authorEmail>
+	<authorUrl>www.newlifeinit.com</authorUrl>
+	<version>1.0</version>
+	<description>COM_HELLO_XML_DESCRIPTION</description>
+	<administration>
+		<files>
+			<filename>index.html</filename>
+			<filename>hello.php</filename>
+		</files>
+		<menu>COM_HELLO</menu>
+	</administration>
+</extension>
