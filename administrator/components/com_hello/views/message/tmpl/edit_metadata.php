@@ -1,6 +1,5 @@
 <?php
 /**
- * @version		$Id$
  * @package		Hello
  * @subpackage	com_hello
  * @copyright	Copyright 2010 New Life in IT Pty Ltd. All rights reserved.
