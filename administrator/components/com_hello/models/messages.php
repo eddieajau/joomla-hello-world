@@ -157,11 +157,11 @@ class HelloModelMessages extends JModelList
 		// Filter by a single or group of categories.
 		$categoryId = $this->getState('filter.category_id');
 		if (is_numeric($categoryId)) {
-			$query->where('a.catid = '.(int) $categoryId);
+			$query->where('a.category_id = '.(int) $categoryId);
 		} else if (is_array($categoryId)) {
 			JArrayHelper::toInteger($categoryId);
 			$categoryId = implode(',', $categoryId);
-			$query->where('a.catid IN ('.$categoryId.')');
+			$query->where('a.category_id IN ('.$categoryId.')');
 		}
 
 		// Filter on the language.
