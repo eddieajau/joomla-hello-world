@@ -45,7 +45,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 
 			<select name="filter_category_id" class="inputbox" onchange="this.form.submit()">
 				<option value=""><?php echo JText::_('JOPTION_SELECT_CATEGORY');?></option>
-				<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_content'),
+				<?php echo JHtml::_('select.options', JHtml::_('category.options', 'com_hello'),
 					'value', 'text', $this->state->get('filter.category_id'));?>
 			</select>
 
