@@ -37,6 +37,10 @@ class HelloController extends JController
 		// Load the component helper.
 		require_once JPATH_COMPONENT.'/helpers/hello.php';
 
+		// Load the submenu.
+		$view = JRequest::getCmd('view', 'messages');
+		HelloHelper::addSubmenu($view);
+
 		// Display the view.
 		parent::display();
 	}

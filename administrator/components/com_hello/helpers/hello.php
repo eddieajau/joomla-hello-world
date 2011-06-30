@@ -19,6 +19,29 @@ defined('_JEXEC') or die;
 class HelloHelper
 {
 	/**
+	 * Configure the Linkbar.
+	 *
+	 * @param   string  $vName  The name of the active view.
+	 *
+	 * @return  void
+	 *
+	 * @since   1.0
+	 */
+	public static function addSubmenu($vName)
+	{
+		JSubMenuHelper::addEntry(
+			JText::_('COM_HELLO_SUBMENU_MESSAGES'),
+			'index.php?option=com_hello&view=messages',
+			$vName == 'messages'
+		);
+		JSubMenuHelper::addEntry(
+			JText::_('COM_HELLO_SUBMENU_CATEGORIES'),
+			'index.php?option=com_categories&extension=com_hello',
+			$vName == 'categories'
+		);
+	}
+
+	/**
 	 * Gets a list of the actions that can be performed.
 	 *
 	 * @return	JObject
