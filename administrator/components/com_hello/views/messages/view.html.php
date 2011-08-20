@@ -74,7 +74,7 @@ class HelloViewMessages extends JView
 		$state	= $this->get('State');
 		$canDo	= HelloHelper::getActions();
 
-		JToolBarHelper::title(JText::_('COM_HELLO_MESSAGES_TITLE'));
+		JToolBarHelper::title(JText::_('COM_HELLO_MESSAGES_TITLE'), 'hello');
 
 		if ($canDo->get('core.create')) {
 			JToolBarHelper::addNew('message.add', 'JTOOLBAR_NEW');

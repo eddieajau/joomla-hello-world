@@ -10,11 +10,54 @@
 	<authorUrl>www.newlifeinit.com</authorUrl>
 	<version>1.0</version>
 	<description>COM_HELLO_XML_DESCRIPTION</description>
+
+	<scriptfile>installer.php</scriptfile>
+
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/installsql.mysql.utf8.php</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/uninstallsql.mysql.utf8.php</file>
+		</sql>
+	</uninstall>
+
+	<media destination="com_hello" folder="media">
+		<folder>css</folder>
+		<folder>images</folder>
+		<filename>index.html</filename>
+	</media>
+
 	<administration>
-		<files>
+		<files folder="">
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
 			<filename>index.html</filename>
+			<filename>installer.php</filename>
+
 			<filename>hello.php</filename>
 		</files>
-		<menu>COM_HELLO</menu>
+		
+		<menu img="../media/com_hello/images/hello_16x16.png"
+			link="option=com_hello">COM_HELLO</menu>
+		
+		<submenu>
+			<menu img="../media/com_hello/images/hello_16x16.png"
+				link="option=com_hello">COM_HELLO</menu>
+			<menu img="class:category"
+				link="option=com_categories&amp;extension=com_hello">JCATEGORIES</menu>
+		</submenu>
 	</administration>
+
 </extension>

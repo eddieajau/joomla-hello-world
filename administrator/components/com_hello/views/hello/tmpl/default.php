@@ -8,6 +8,8 @@
 
 // No direct access
 defined('_JEXEC') or die;
+
+JHtml::stylesheet('com_hello/admin.css', null, true);
 ?>
 
 Welcome to the Hello World component!

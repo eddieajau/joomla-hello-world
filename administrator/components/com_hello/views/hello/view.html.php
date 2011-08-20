@@ -43,7 +43,7 @@ class HelloViewHello extends JView
 		$canDo	= HelloHelper::getActions();
 
 		// Add the view title.
-		JToolBarHelper::title(JText::_('COM_HELLO_HELLO_TITLE'));
+		JToolBarHelper::title(JText::_('COM_HELLO_HELLO_TITLE'), 'hello');
 
 		// Check if the Options button can be added.
 		if ($canDo->get('core.admin')) {

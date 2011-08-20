@@ -1,0 +1,9 @@
+/* Toolbar */
+
+.icon-48-hello {
+	background: url(../images/hello_48x48.png) no-repeat left;
+}
+
+.icon-16-hello {
+	background: url(../images/hello_16x16.png) no-repeat left;
+}

@@ -76,7 +76,15 @@ class HelloViewMessage extends JView
 		$checkedOut	= !($this->item->checked_out == 0 || $this->item->checked_out == $user->get('id'));
 		$canDo		= HelloHelper::getActions();
 
-		JToolBarHelper::title(JText::_('COM_Hello_'.($checkedOut ? 'VIEW_Message' : ($isNew ? 'ADD_Message' : 'EDIT_Message')).'_TITLE'));
+		JToolBarHelper::title(
+			JText::_(
+				'COM_Hello_'.
+				($checkedOut
+					? 'VIEW_Message'
+					: ($isNew ? 'ADD_Message' : 'EDIT_Message')).'_TITLE',
+				'hello'
+			)
+		);
 
 		// If not checked out, can save the item.
 		if (!$checkedOut && $canDo->get('core.edit')) {
