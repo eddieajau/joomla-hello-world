@@ -48,10 +48,10 @@
 
 			<filename>hello.php</filename>
 		</files>
-		
+
 		<menu img="../media/com_hello/images/hello_16x16.png"
 			link="option=com_hello">COM_HELLO</menu>
-		
+
 		<submenu>
 			<menu img="../media/com_hello/images/hello_16x16.png"
 				link="option=com_hello">COM_HELLO</menu>

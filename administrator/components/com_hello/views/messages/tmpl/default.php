@@ -10,8 +10,8 @@
 defined('_JEXEC') or die;
 
 //JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
-JHtml::stylesheet('com_hello/admin.css', null, true);
 JHtml::_('behavior.tooltip');
+JHtml::stylesheet('com_hello/admin.css', null, true);
 
 $user		= JFactory::getUser();
 $listOrder	= $this->escape($this->state->get('list.ordering'));
