@@ -25,7 +25,7 @@
 		</sql>
 	</uninstall>
 
-	<media destination="com_hello" folder="media">
+	<media destination="com_hello" folder="admin/media">
 		<folder>css</folder>
 		<folder>images</folder>
 		<filename>index.html</filename>
