@@ -123,8 +123,6 @@
 				<copy
 					file="${targetdir}/package/${extname}/${extsub}/installer.php"
 					tofile="${targetdir}/package/${extname}/installer.php" overwrite="true" />
-				<delete
-					file="${targetdir}/package/${extname}/${extsub}/installer.php" />
 			</then>
 		</if>
 
