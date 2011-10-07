@@ -32,7 +32,7 @@
 	</media>
 
 	<administration>
-		<files folder="">
+		<files folder="admin">
 			<folder>controllers</folder>
 			<folder>helpers</folder>
 			<folder>language</folder>
